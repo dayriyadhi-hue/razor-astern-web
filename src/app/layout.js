@@ -17,7 +17,7 @@ export const metadata = {
   keywords: ["perizinan impor", "SNI", "TKDN", "regulasi bisnis Indonesia", "PT Razan Aeterna Solusi"],
   authors: [{ name: "PT Razan Aeterna Solusi" }],
   openGraph: {
-    title: "PT Razan Aeterna Solusi | Mitra Perizinan Bisnis Anda",
+    title: "Razan Aeterna Solusi | Mitra Perizinan Bisnis Anda",
     description: "Layanan pengurusan perizinan impor (PI), SNI, dan TKDN terpercaya dan transparan.",
     url: "https://razansolusi.com",
     siteName: "Razan Aeterna Solusi",
