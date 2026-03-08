@@ -12,8 +12,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "PT Razan Aeterna Solusi | Mitra Perizinan & Regulasi",
-  description: "Solusi perizinan terpercaya untuk bisnis Anda. Kami membantu pengurusan PI, SNI, TKDN, dan regulasi lainnya dengan pendekatan personal.",
+  title: "PT Razan Aeterna Solusi | Ahli Perizinan & Regulasi Bisnis",
+  description: "Solusi perizinan terpercaya di Indonesia. Kami membantu pengurusan PI, SNI, TKDN, dan regulasi lainnya dengan layanan profesional dan personal.",
+  keywords: ["perizinan impor", "SNI", "TKDN", "regulasi bisnis Indonesia", "PT Razan Aeterna Solusi"],
+  authors: [{ name: "PT Razan Aeterna Solusi" }],
+  openGraph: {
+    title: "PT Razan Aeterna Solusi | Mitra Perizinan Bisnis Anda",
+    description: "Layanan pengurusan perizinan impor (PI), SNI, dan TKDN terpercaya dan transparan.",
+    url: "https://razansolusi.com",
+    siteName: "Razan Aeterna Solusi",
+    locale: "id_ID",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PT Razan Aeterna Solusi",
+    description: "Solusi perizinan dan regulasi bisnis profesional di Indonesia.",
+  },
+  icons: {
+    icon: "/RAS Logo.svg",
+    apple: "/RAS Logo.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
