@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "PT Razan Aeterna Solusi | Ahli Perizinan & Regulasi Bisnis",
+  title: "Razan Aeterna Solusi | Ahli Perizinan & Regulasi Bisnis",
   description: "Solusi perizinan terpercaya di Indonesia. Kami membantu pengurusan PI, SNI, TKDN, dan regulasi lainnya dengan layanan profesional dan personal.",
   keywords: ["perizinan impor", "SNI", "TKDN", "regulasi bisnis Indonesia", "PT Razan Aeterna Solusi"],
   authors: [{ name: "PT Razan Aeterna Solusi" }],
@@ -30,8 +30,8 @@ export const metadata = {
     description: "Solusi perizinan dan regulasi bisnis profesional di Indonesia.",
   },
   icons: {
-    icon: "/RAS Logo.svg",
-    apple: "/RAS Logo.svg",
+    icon: "/RAS Icon.svg",
+    apple: "/RAS Icon.svg",
   },
 };
 
