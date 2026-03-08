@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Boston Storage | Experts de la gestion de données",
-  description: "Expert du stockage, des systèmes et réseaux, des bases de données et de la cybersécurité. Accompagnement sur-mesure pour votre transformation digitale.",
+  title: "PT Razan Aeterna Solusi | Mitra Perizinan & Regulasi",
+  description: "Solusi perizinan terpercaya untuk bisnis Anda. Kami membantu pengurusan PI, SNI, TKDN, dan regulasi lainnya dengan pendekatan personal.",
 };
 
 export default function RootLayout({ children }) {
