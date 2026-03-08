@@ -57,14 +57,23 @@ const Navbar = () => {
                             <X className="w-8 h-8" />
                         </button>
                         <div className="flex flex-col items-center gap-8">
-                            {['Beranda', 'Tentang', 'Layanan', 'Berita', 'Regulasi', 'Proses Kerja', 'FAQ', 'Kontak'].map((link) => (
+                            {[
+                                { name: 'Beranda', href: '#' },
+                                { name: 'Tentang', href: '#tentang' },
+                                { name: 'Layanan', href: '#layanan' },
+                                { name: 'Berita', href: '#berita' },
+                                { name: 'Regulasi', href: '#regulasi' },
+                                { name: 'Proses Kerja', href: '#proses-kerja' },
+                                { name: 'FAQ', href: '#faq' },
+                                { name: 'Kontak', href: '#kontak' }
+                            ].map((link) => (
                                 <a
-                                    key={link}
-                                    href={`#${link.toLowerCase().replace(' ', '-')}`}
-                                    className="text-4xl font-bold text-white hover:text-blue-500 transition-colors"
+                                    key={link.name}
+                                    href={link.href}
+                                    className="text-4xl font-bold text-white hover:text-[#F05A28] transition-colors"
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    {link}
+                                    {link.name}
                                 </a>
                             ))}
                         </div>
