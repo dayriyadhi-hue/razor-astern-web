@@ -34,13 +34,13 @@ const Footer = () => {
     const [openIndex, setOpenIndex] = useState(null);
 
     return (
-        <footer id="faq" className="py-24 md:py-32 bg-[#0A0C10] text-white overflow-hidden relative border-t border-white/[0.03]">
+        <footer id="faq" className="py-24 md:py-32 bg-[#0A0C10] text-white overflow-hidden relative border-t border-white/[0.03] scroll-mt-20">
             <div className="max-w-[1400px] mx-auto px-6 md:px-12">
                 {/* Unified Hub */}
                 <div id="info-hub" className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24">
                     {/* Col 1: Brand & Title */}
                     <div className="lg:col-span-3 flex flex-col items-start gap-8">
-                        <img src="/RAS Logo.svg" alt="Razan Logo" className="w-16 h-16 object-contain" />
+                        <img src="/RAS Logo.svg" alt="Logo PT Razan Aeterna Solusi" className="w-16 h-16 object-contain" loading="lazy" />
                         <div>
                             <span className="label-overline text-orange mb-4 block">Information Hub</span>
                             <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tighter uppercase mb-6 leading-none">F.A.Q</h2>
@@ -51,7 +51,7 @@ const Footer = () => {
                     </div>
 
                     {/* Col 2: FAQ Items */}
-                    <div className="lg:col-span-4 flex flex-col gap-2">
+                    <div className="lg:col-span-4 flex flex-col gap-2" role="region" aria-label="Pertanyaan yang sering diajukan">
                         {faqs.map((faq, i) => (
                             <div key={i} className="glass-effect border border-white/[0.03] rounded-sm group overflow-hidden transition-all duration-500 hover:border-orange/20">
                                 <button
@@ -101,9 +101,14 @@ const Footer = () => {
                             </div>
                             <div className="flex gap-4">
                                 {[Facebook, Linkedin, Twitter].map((Icon, idx) => (
-                                    <div key={idx} className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center hover:border-orange/30 hover:bg-orange/5 hover:text-orange transition-all cursor-pointer group glass-effect">
+                                    <a 
+                                        key={idx} 
+                                        href="#" 
+                                        aria-label={Icon.name}
+                                        className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center hover:border-orange/30 hover:bg-orange/5 hover:text-orange transition-all cursor-pointer group glass-effect"
+                                    >
                                         <Icon className="w-4 h-4 text-white/20 group-hover:text-orange transition-colors" />
-                                    </div>
+                                    </a>
                                 ))}
                             </div>
                         </div>

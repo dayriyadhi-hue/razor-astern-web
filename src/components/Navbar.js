@@ -46,11 +46,19 @@ const Navbar = () => {
                         </div>
 
                         <div className="flex items-center gap-4">
-                            <button className="hidden sm:block px-8 py-3 bg-orange text-white text-[10px] font-bold tracking-[0.2em] uppercase transition-all hover:bg-orange/90 active:scale-95 rounded-full shadow-[0_10px_20px_rgba(240,90,40,0.2)]">
-                                Konsultasi
-                            </button>
+                            <a 
+                                href="https://wa.me/6281112345678" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hidden sm:block px-8 py-3 bg-orange text-white text-[10px] font-bold tracking-[0.2em] uppercase transition-all hover:bg-orange/90 active:scale-95 rounded-full shadow-[0_10px_20px_rgba(240,90,40,0.2)]"
+                                aria-label="Hubungi kami via WhatsApp untuk konsultasi gratis"
+                            >
+                                Konsultasi Gratis
+                            </a>
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
+                                aria-label={isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
+                                aria-expanded={isOpen}
                                 className={`flex items-center justify-center w-12 h-12 rounded-full border border-white/10 transition-all active:scale-95 ${scrolled ? 'bg-white/5' : 'bg-transparent hover:bg-white/10'}`}
                             >
                                 <div className="w-5 flex flex-col gap-1.5 items-end">
@@ -70,14 +78,18 @@ const Navbar = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         className="fixed inset-0 bg-slate-1000/95 z-[60] flex items-center justify-center backdrop-blur-3xl"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-label="Menu navigasi"
                     >
                         <button
                             onClick={() => setIsOpen(false)}
+                            aria-label="Tutup menu"
                             className="absolute top-10 right-10 text-white p-2 hover:bg-white/10 rounded-full transition-all"
                         >
                             <X className="w-8 h-8" />
                         </button>
-                        <div className="flex flex-col items-center gap-8">
+                        <nav className="flex flex-col items-center gap-8">
                             {[
                                 { name: 'Beranda', href: '#' },
                                 { name: 'Layanan', href: '#layanan' },
@@ -96,7 +108,7 @@ const Navbar = () => {
                                     {link.name}
                                 </motion.a>
                             ))}
-                        </div>
+                        </nav>
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 
 const Hero = () => {
     return (
-        <section className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden">
+        <section className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden scroll-mt-20">
             {/* Video Background */}
             <div className="absolute inset-0 z-0">
                 <video
@@ -13,9 +13,11 @@ const Hero = () => {
                     muted
                     loop
                     playsInline
+                    poster="/hero-fallback.svg"
                     className="w-full h-full object-cover"
                 >
                     <source src="/RAS Video 2026.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
                 </video>
                 {/* Overlay for readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20"></div>

@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import ConsultationCTA from '@/components/ConsultationCTA';
 import Solutions from '@/components/Solutions';
 import Process from '@/components/Process';
 import Values from '@/components/Values';
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <ConsultationCTA />
         <Solutions />
         <Process />
         <Values />

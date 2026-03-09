@@ -31,7 +31,7 @@ const Values = () => {
     ];
 
     return (
-        <section id="mengapa-kami" className="py-32 md:py-40 bg-[#0A0C10] text-white overflow-hidden relative">
+        <section id="mengapa-kami" className="py-32 md:py-40 bg-[#0A0C10] text-white overflow-hidden relative scroll-mt-20">
             {/* Subtle background pattern */}
             <div className="absolute inset-0 opacity-[0.8] pointer-events-none">
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-orange/[0.03] rounded-full blur-[150px] translate-x-1/3 -translate-y-1/4"></div>

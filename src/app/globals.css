@@ -93,6 +93,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Scroll margin untuk anchor links (offset untuk fixed navbar) */
+section {
+  scroll-margin-top: 80px;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

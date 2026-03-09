@@ -20,7 +20,7 @@ const Solutions = () => {
     ];
 
     return (
-        <section id="layanan" className="py-32 md:py-40 bg-[#0A0C10] text-white overflow-hidden relative">
+        <section id="layanan" className="py-32 md:py-40 bg-[#0A0C10] text-white overflow-hidden relative scroll-mt-20">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-orange/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
@@ -46,7 +46,7 @@ const Solutions = () => {
                         <p className="text-lg md:text-xl text-white/40 leading-relaxed font-light mb-10">
                             Kami merancang setiap alur perizinan dengan presisi teknis, memastikan operasional bisnis Anda berjalan lancar di Indonesia.
                         </p>
-                        <button className="px-10 py-5 glass-effect rounded-full hover:bg-white hover:text-navy transition-all duration-700 text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-4 group">
+                        <button className="px-10 py-5 glass-effect rounded-full hover:bg-white hover:text-navy transition-all duration-700 text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-4 group min-h-[44px]">
                             Lihat Semua Layanan
                             <div className="w-2 h-2 rounded-full bg-orange group-hover:scale-150 transition-transform"></div>
                         </button>
@@ -54,7 +54,7 @@ const Solutions = () => {
                 </div>
 
                 {/* Bento Grid Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" role="region" aria-label="Daftar layanan kami">
                     {solutions.map((sol, i) => (
                         <motion.div
                             key={i}
@@ -103,10 +103,10 @@ const Solutions = () => {
                 <div className="mt-24 md:mt-32 pt-20 border-t border-white/5 flex flex-col items-center">
                     <p className="label-overline text-white/30 tracking-widest mb-16 text-center">Dipercaya oleh Berbagai Industri</p>
                     <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-                        <img src="/1.svg" alt="Partner" className="h-10 w-auto hover:opacity-100 transition-opacity" />
-                        <img src="/2.svg" alt="Partner" className="h-10 w-auto hover:opacity-100 transition-opacity" />
-                        <img src="/3.svg" alt="Partner" className="h-10 w-auto hover:opacity-100 transition-opacity" />
-                        <img src="/4.svg" alt="Partner" className="h-10 w-auto hover:opacity-100 transition-opacity" />
+                        <img src="/1.svg" alt="Partner perusahaan" className="h-10 w-auto hover:opacity-100 transition-opacity" loading="lazy" />
+                        <img src="/2.svg" alt="Partner perusahaan" className="h-10 w-auto hover:opacity-100 transition-opacity" loading="lazy" />
+                        <img src="/3.svg" alt="Partner perusahaan" className="h-10 w-auto hover:opacity-100 transition-opacity" loading="lazy" />
+                        <img src="/4.svg" alt="Partner perusahaan" className="h-10 w-auto hover:opacity-100 transition-opacity" loading="lazy" />
                     </div>
                 </div>
             </div>

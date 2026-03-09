@@ -25,7 +25,7 @@ const Process = () => {
     ];
 
     return (
-        <section id="proses-kerja" className="py-32 md:py-40 bg-[#0A0C10] text-white overflow-hidden relative border-t border-white/[0.03]">
+        <section id="proses-kerja" className="py-32 md:py-40 bg-[#0A0C10] text-white overflow-hidden relative border-t border-white/[0.03] scroll-mt-20">
             {/* Subtle background pattern */}
             <div className="absolute inset-0 opacity-[0.4] pointer-events-none">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(240,90,40,0.02)_0%,transparent_70%)]"></div>
@@ -50,9 +50,9 @@ const Process = () => {
                     </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" role="list" aria-label="Proses perizinan 4 tahap">
                     {steps.map((step, i) => (
-                        <div key={i} className="relative p-10 lg:p-12 glass-effect border border-white/[0.05] hover:border-orange/30 transition-all duration-700 group overflow-hidden rounded-sm">
+                        <div key={i} className="relative p-10 lg:p-12 glass-effect border border-white/[0.05] hover:border-orange/30 transition-all duration-700 group overflow-hidden rounded-sm" role="listitem">
                             {/* Hover Background Accent */}
                             <div className="absolute top-0 right-0 w-40 h-40 bg-orange/5 blur-[80px] translate-x-20 -translate-y-20 group-hover:translate-x-10 group-hover:-translate-y-10 transition-transform duration-1000"></div>
 
