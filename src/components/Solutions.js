@@ -99,28 +99,29 @@ const Solutions = () => {
                     ))}
                 </div>
 
-                {/* Bottom Marquee Section - "Ciamik" & Dynamic */}
-                <div className="mt-24 md:mt-32 pt-20 border-t border-navy/5 w-full overflow-hidden">
+                {/* Strategic Partners Section - Refined Visibility */}
+                <div className="mt-32 pt-24 border-t border-navy/5 w-full overflow-hidden">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 1 }}
                         className="flex flex-col items-center"
                     >
-                        <div className="flex items-center gap-4 mb-16">
-                            <span className="h-[1px] w-8 bg-gold/30"></span>
-                            <p className="label-overline text-navy/30 tracking-[0.3em] text-center">Akreditasi & Kemitraan Strategis</p>
-                            <span className="h-[1px] w-8 bg-gold/30"></span>
+                        <div className="flex items-center gap-6 mb-20">
+                            <span className="h-[1px] w-12 bg-navy/5"></span>
+                            <p className="label-overline text-navy/40 tracking-[0.4em] text-center">Akreditasi & Kemitraan Strategis</p>
+                            <span className="h-[1px] w-12 bg-navy/5"></span>
                         </div>
 
-                        {/* Infinite Marquee Container */}
-                        <div className="relative w-full logo-mask">
-                            <div className="animate-marquee flex items-center gap-24 md:gap-32 py-4">
-                                {[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4].map((num, idx) => (
+                        {/* Infinite Marquee - Sized for Visibility */}
+                        <div className="relative w-full logo-mask pb-10">
+                            <div className="animate-marquee flex items-center gap-32 md:gap-48 py-4">
+                                {[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4].map((num, idx) => (
                                     <img
                                         key={idx}
                                         src={`/${num}.svg`}
                                         alt={`Partner ${num}`}
-                                        className="h-8 md:h-12 w-auto opacity-40 grayscale hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-500 cursor-pointer brightness-0"
+                                        className="h-10 md:h-14 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-700 cursor-pointer brightness-0"
                                         loading="lazy"
                                     />
                                 ))}
