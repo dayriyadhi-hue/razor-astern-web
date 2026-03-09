@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #0A0C12;
-  --navy: #0A0C12;
-  --orange: #F05A28;
-  --slate-bg: #F8FAFC;
-  --warm-gray: #F1F5F9;
+  --background: #FBF9F7;
+  --foreground: #1A1A1A;
+  --navy: #1E3A8A;
+  --gold: #C5A059;
+  --blue-vibrant: #3B82F6;
+  --slate-bg: #FFFFFF;
+  --warm-gray: #F3F4F6;
 
-  /* Premium Glassmorphism Tokens - Adjusted for Light Mode */
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(10, 12, 18, 0.05);
-  --glass-blur: 20px;
+  /* Premium Twine-inspired Tokens */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(30, 58, 138, 0.08);
+  --glass-blur: 24px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-navy: var(--navy);
-  --color-orange: var(--orange);
+  --color-gold: var(--gold);
+  --color-blue-vibrant: var(--blue-vibrant);
   --color-slate-bg: var(--slate-bg);
   --color-warm-gray: var(--warm-gray);
   --font-heading: var(--font-plus-jakarta);
-  --font-body: var(--font-inter);
-  --font-serif: var(--font-dm-serif);
 }
 
 /* ===== BASE RESET & TYPOGRAPHY ===== */
@@ -52,11 +52,11 @@ h6 {
 }
 
 .dashed-line {
-  border-top: 1px dashed rgba(10, 12, 18, 0.08);
+  border-top: 1px dashed rgba(30, 58, 138, 0.1);
 }
 
 .dashed-line-dark {
-  border-top: 1px dashed rgba(10, 12, 18, 0.15);
+  border-top: 1px dashed rgba(30, 58, 138, 0.2);
 }
 
 /* ===== PREMIUM TEXT STYLES ===== */
@@ -69,7 +69,7 @@ h6 {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #0A0C12 0%, rgba(10, 12, 18, 0.6) 100%);
+  background: linear-gradient(135deg, #1E3A8A 0%, #C5A059 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -84,8 +84,8 @@ h6 {
 
 /* ===== SELECTION ===== */
 ::selection {
-  background: rgba(240, 90, 40, 0.3);
-  color: #FFFFFF;
+  background: rgba(30, 58, 138, 0.2);
+  color: #1A1A1A;
 }
 
 /* ===== SMOOTH SCROLL ===== */
@@ -113,5 +113,5 @@ section {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--orange);
+  background: var(--gold);
 }

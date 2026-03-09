@@ -38,7 +38,7 @@ const Navbar = () => {
                                 <a
                                     key={item.name}
                                     href={item.href}
-                                    className={`text-[10px] font-bold uppercase tracking-[0.2em] transition-colors ${scrolled ? 'text-navy/50 hover:text-navy' : 'text-navy/60 hover:text-navy'}`}
+                                    className={`text-[10px] font-bold uppercase tracking-[0.2em] transition-colors ${scrolled ? 'text-navy/50 hover:text-gold' : 'text-navy/60 hover:text-gold'}`}
                                 >
                                     {item.name}
                                 </a>
@@ -50,7 +50,7 @@ const Navbar = () => {
                                 href="https://wa.me/6281112345678"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hidden sm:block px-8 py-3 bg-orange text-white text-[10px] font-bold tracking-[0.2em] uppercase transition-all hover:bg-orange/90 active:scale-95 rounded-full shadow-[0_10px_20px_rgba(240,90,40,0.15)]"
+                                className="hidden sm:block px-8 py-3 bg-navy text-white text-[10px] font-bold tracking-[0.2em] uppercase transition-all hover:bg-gold active:scale-95 rounded-sm shadow-[0_10px_20px_rgba(30,58,138,0.1)]"
                                 aria-label="Hubungi kami via WhatsApp untuk konsultasi gratis"
                             >
                                 Konsultasi Gratis
@@ -77,7 +77,7 @@ const Navbar = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 bg-white/95 z-[60] flex items-center justify-center backdrop-blur-3xl"
+                        className="fixed inset-0 bg-[#FBF9F7]/98 z-[60] flex items-center justify-center backdrop-blur-3xl"
                         role="dialog"
                         aria-modal="true"
                         aria-label="Menu navigasi"
@@ -102,7 +102,7 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     whileHover={{ scale: 1.1 }}
-                                    className="text-4xl md:text-5xl font-extrabold text-navy hover:text-orange transition-colors tracking-tight uppercase"
+                                    className="text-4xl md:text-5xl font-extrabold text-navy hover:text-gold transition-colors tracking-tight uppercase"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     {link.name}
