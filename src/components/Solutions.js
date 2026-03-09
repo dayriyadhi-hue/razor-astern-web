@@ -113,15 +113,15 @@ const Solutions = () => {
                             <span className="h-[1px] w-12 bg-navy/5"></span>
                         </div>
 
-                        {/* Infinite Marquee - Sized for Visibility */}
+                        {/* Infinite Marquee - LARGE Sized for Maximum Visibility */}
                         <div className="relative w-full logo-mask pb-10">
-                            <div className="animate-marquee flex items-center gap-32 md:gap-48 py-4">
+                            <div className="animate-marquee flex items-center gap-40 md:gap-64 py-8">
                                 {[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4].map((num, idx) => (
                                     <img
                                         key={idx}
                                         src={`/${num}.svg`}
                                         alt={`Partner ${num}`}
-                                        className="h-10 md:h-14 w-auto opacity-60 grayscale hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-700 cursor-pointer brightness-0"
+                                        className="h-16 md:h-24 w-auto opacity-100 hover:scale-110 transition-all duration-700 cursor-pointer brightness-0"
                                         loading="lazy"
                                     />
                                 ))}
