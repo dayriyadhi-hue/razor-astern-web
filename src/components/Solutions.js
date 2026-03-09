@@ -99,15 +99,34 @@ const Solutions = () => {
                     ))}
                 </div>
 
-                {/* Bottom Stats or Marquee Focus */}
-                <div className="mt-24 md:mt-32 pt-20 border-t border-black/5 flex flex-col items-center">
-                    <p className="label-overline text-navy/20 tracking-widest mb-16 text-center">Dipercaya oleh Berbagai Industri</p>
-                    <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
-                        <img src="/1.svg" alt="Partner perusahaan" className="h-10 w-auto transition-all" loading="lazy" />
-                        <img src="/2.svg" alt="Partner perusahaan" className="h-10 w-auto transition-all" loading="lazy" />
-                        <img src="/3.svg" alt="Partner perusahaan" className="h-10 w-auto transition-all" loading="lazy" />
-                        <img src="/4.svg" alt="Partner perusahaan" className="h-10 w-auto transition-all" loading="lazy" />
-                    </div>
+                {/* Bottom Marquee Section - "Ciamik" & Dynamic */}
+                <div className="mt-24 md:mt-32 pt-20 border-t border-navy/5 w-full overflow-hidden">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        className="flex flex-col items-center"
+                    >
+                        <div className="flex items-center gap-4 mb-16">
+                            <span className="h-[1px] w-8 bg-gold/30"></span>
+                            <p className="label-overline text-navy/30 tracking-[0.3em] text-center">Akreditasi & Kemitraan Strategis</p>
+                            <span className="h-[1px] w-8 bg-gold/30"></span>
+                        </div>
+
+                        {/* Infinite Marquee Container */}
+                        <div className="relative w-full logo-mask">
+                            <div className="animate-marquee flex items-center gap-24 md:gap-32 py-4">
+                                {[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4].map((num, idx) => (
+                                    <img
+                                        key={idx}
+                                        src={`/${num}.svg`}
+                                        alt={`Partner ${num}`}
+                                        className="h-8 md:h-12 w-auto opacity-40 grayscale hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-500 cursor-pointer brightness-0"
+                                        loading="lazy"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
