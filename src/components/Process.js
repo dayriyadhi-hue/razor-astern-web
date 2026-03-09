@@ -25,41 +25,52 @@ const Process = () => {
     ];
 
     return (
-        <section id="proses-kerja" className="py-32 bg-slate-950 text-white overflow-hidden relative">
-            {/* Background Texture/Pattern */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
-                <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
+        <section id="proses-kerja" className="py-32 md:py-40 bg-[#0A0C10] text-white overflow-hidden relative border-t border-white/[0.03]">
+            {/* Subtle background pattern */}
+            <div className="absolute inset-0 opacity-[0.4] pointer-events-none">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(240,90,40,0.02)_0%,transparent_70%)]"></div>
             </div>
 
-            <div className="max-w-[1800px] mx-auto px-10 relative z-10">
-                <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+                <div className="mb-24 md:mb-32 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
                     <div className="max-w-3xl">
-                        <div className="flex items-center gap-4 mb-6">
-                            <span className="text-xs font-bold border border-white/20 rounded-full w-5 h-5 flex items-center justify-center text-white/40">2</span>
-                            <span className="text-xs font-bold uppercase tracking-[0.4em] text-white/40">Prosedur Kerja</span>
+                        <div className="flex items-center gap-4 mb-8">
+                            <span className="h-[1px] w-12 bg-orange"></span>
+                            <span className="label-overline text-orange">Alur Kerja</span>
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-medium tracking-tight leading-[1.15]">
-                            Proses transparan dan terukur untuk kelancaran bisnis Anda
+                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[0.9] uppercase">
+                            Transparansi <br />
+                            <span className="font-serif italic font-light text-white/20 lowercase">Tanpa Kompromi.</span>
                         </h2>
+                    </div>
+                    <div className="max-w-md pb-4">
+                        <p className="text-lg text-white/40 leading-relaxed font-light">
+                            Kami menyederhanakan birokrasi yang rumit menjadi langkah-langkah strategis yang terukur dan efisien.
+                        </p>
                     </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {steps.map((step, i) => (
-                        <div key={i} className="relative p-12 bg-white/5 border border-white/10 hover:border-orange/50 transition-all duration-500 group overflow-hidden">
+                        <div key={i} className="relative p-10 lg:p-12 glass-effect border border-white/[0.05] hover:border-orange/30 transition-all duration-700 group overflow-hidden rounded-sm">
                             {/* Hover Background Accent */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-orange/10 blur-[60px] translate-x-16 -translate-y-16 group-hover:translate-x-8 group-hover:-translate-y-8 transition-transform duration-700"></div>
+                            <div className="absolute top-0 right-0 w-40 h-40 bg-orange/5 blur-[80px] translate-x-20 -translate-y-20 group-hover:translate-x-10 group-hover:-translate-y-10 transition-transform duration-1000"></div>
 
-                            <span className="text-6xl font-[950] text-white/5 absolute -top-2 -right-2 group-hover:text-orange/10 transition-colors duration-500">{step.num}</span>
+                            <span className="text-8xl font-extrabold text-white/[0.02] absolute -top-4 -right-4 group-hover:text-orange/[0.04] transition-colors duration-700 tracking-tighter">{step.num}</span>
 
-                            <div className="relative z-10">
-                                <h3 className="text-base font-bold mb-6 uppercase tracking-wider text-white group-hover:text-orange transition-colors duration-300">
-                                    {step.title}
-                                </h3>
-                                <div className="w-8 h-[1px] bg-orange/40 mb-6 group-hover:w-16 transition-all duration-500"></div>
-                                <p className="text-white/70 leading-relaxed text-sm font-mono uppercase tracking-wider">
-                                    {step.desc}
-                                </p>
+                            <div className="relative z-10 h-full flex flex-col justify-between">
+                                <div className="mb-12">
+                                    <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-orange mb-10 glass-effect group-hover:bg-orange group-hover:text-white transition-all duration-500 text-xs font-bold">
+                                        {step.num}
+                                    </div>
+                                    <h3 className="text-xl font-bold mb-6 tracking-tight group-hover:text-white transition-colors">
+                                        {step.title}
+                                    </h3>
+                                    <p className="text-white/30 leading-relaxed text-[14px] font-light group-hover:text-white/50 transition-colors">
+                                        {step.desc}
+                                    </p>
+                                </div>
+                                <div className="w-full h-[1px] bg-white/[0.05] group-hover:bg-orange/30 transition-colors duration-700"></div>
                             </div>
                         </div>
                     ))}

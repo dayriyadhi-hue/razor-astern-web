@@ -21,10 +21,10 @@ const WhatsAppFloat = () => {
         >
             <button
                 onClick={handleClick}
-                className="group relative flex items-center justify-center w-16 h-16 hover:-translate-y-1 active:scale-95 transition-all duration-300"
+                className="group relative flex items-center justify-center w-16 h-16 hover:-translate-y-2 active:scale-95 transition-all duration-500"
             >
                 {/* Tooltip */}
-                <span className="absolute right-[110%] mr-4 bg-white text-navy text-[10px] font-mono uppercase tracking-[0.2em] px-4 py-2 rounded border border-navy/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none shadow-sm">
+                <span className="absolute right-[110%] mr-6 glass-effect text-white text-[10px] font-bold uppercase tracking-[0.2em] px-5 py-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0 whitespace-nowrap pointer-events-none shadow-2xl border-white/5">
                     Konsultasi Gratis
                 </span>
 
