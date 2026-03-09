@@ -20,10 +20,10 @@ const Solutions = () => {
     ];
 
     return (
-        <section id="layanan" className="py-32 md:py-40 bg-[#0A0C10] text-white overflow-hidden relative scroll-mt-20">
-            {/* Background Decorative Elements */}
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-orange/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
-            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+        <section id="layanan" className="py-32 md:py-40 bg-white text-navy overflow-hidden relative scroll-mt-20">
+            {/* Background Decorative Elements - Brighter for Light Mode */}
+            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-orange/[0.03] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/[0.02] rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
 
             <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
                 {/* Header Section */}
@@ -37,24 +37,24 @@ const Solutions = () => {
                             <span className="h-[1px] w-12 bg-orange"></span>
                             <span className="label-overline text-orange">Keahlian Kami</span>
                         </motion.div>
-                        <h2 className="text-5xl md:text-7xl lg:text-9xl font-extrabold tracking-tighter leading-[0.85] uppercase">
+                        <h2 className="text-5xl md:text-7xl lg:text-9xl font-extrabold tracking-tighter leading-[0.85] uppercase text-navy">
                             Solusi <br />
-                            <span className="font-serif italic text-white/20 font-light lowercase">Strategis</span>
+                            <span className="font-serif italic text-navy/10 font-light lowercase">Strategis</span>
                         </h2>
                     </div>
                     <div className="max-w-md pb-4">
-                        <p className="text-lg md:text-xl text-white/40 leading-relaxed font-light mb-10">
+                        <p className="text-lg md:text-xl text-navy/50 leading-relaxed font-light mb-10">
                             Kami merancang setiap alur perizinan dengan presisi teknis, memastikan operasional bisnis Anda berjalan lancar di Indonesia.
                         </p>
-                        <button className="px-10 py-5 glass-effect rounded-full hover:bg-white hover:text-navy transition-all duration-700 text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-4 group min-h-[44px]">
+                        <button className="px-10 py-5 bg-navy text-white rounded-full hover:bg-orange transition-all duration-700 text-[10px] font-bold uppercase tracking-[0.2em] flex items-center gap-4 group min-h-[44px] shadow-xl shadow-navy/10">
                             Lihat Semua Layanan
-                            <div className="w-2 h-2 rounded-full bg-orange group-hover:scale-150 transition-transform"></div>
+                            <div className="w-2 h-2 rounded-full bg-orange group-hover:bg-white transition-colors"></div>
                         </button>
                     </div>
                 </div>
 
                 {/* Bento Grid Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" role="region" aria-label="Daftar layanan kami">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" role="region" aria-label="Daftar layanan kami">
                     {solutions.map((sol, i) => (
                         <motion.div
                             key={i}
@@ -62,25 +62,25 @@ const Solutions = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: i * 0.05 }}
                             whileHover={{ y: -8 }}
-                            className="group relative bg-white/[0.02] border border-white/[0.05] p-8 lg:p-10 min-h-[400px] flex flex-col justify-between overflow-hidden cursor-pointer rounded-sm hover:bg-white/[0.04] transition-all duration-500"
+                            className="group relative bg-[#F9FAFB] border border-black/[0.03] p-8 lg:p-10 min-h-[400px] flex flex-col justify-between overflow-hidden cursor-pointer rounded-2xl hover:bg-white hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08)] transition-all duration-500"
                         >
                             {/* Card Background Gradient */}
-                            <div className={`absolute inset-0 bg-gradient-to-br ${sol.color} opacity-10 group-hover:opacity-30 transition-opacity duration-700`}></div>
+                            <div className={`absolute inset-0 bg-gradient-to-br ${sol.color} opacity-20 group-hover:opacity-40 transition-opacity duration-700`}></div>
 
                             {/* Content */}
                             <div className="relative z-10">
                                 <div className="flex justify-between items-start mb-12">
-                                    <span className="label-overline text-white/20 border border-white/10 px-4 py-1.5 rounded-full group-hover:border-orange/40 group-hover:text-orange transition-all duration-500 text-[9px] tracking-[0.2em]">
+                                    <span className="label-overline text-navy/20 border border-black/5 px-4 py-1.5 rounded-full group-hover:border-orange/20 group-hover:text-orange transition-all duration-500 text-[9px] tracking-[0.2em]">
                                         {sol.category}
                                     </span>
-                                    <span className="text-[10px] text-white/10 font-bold group-hover:text-white/30 tabular-nums tracking-widest">{sol.id}</span>
+                                    <span className="text-[10px] text-navy/10 font-bold group-hover:text-navy/30 tabular-nums tracking-widest">{sol.id}</span>
                                 </div>
 
-                                <h3 className="text-2xl font-bold tracking-tight leading-[1.2] mb-6 group-hover:translate-x-1 transition-transform duration-500">
+                                <h3 className="text-2xl font-bold tracking-tight leading-[1.2] mb-6 group-hover:translate-x-1 transition-transform duration-500 text-navy">
                                     {sol.title}
                                 </h3>
 
-                                <p className="text-white/30 text-[14px] leading-relaxed group-hover:text-white/60 transition-colors font-light">
+                                <p className="text-navy/40 text-[14px] leading-relaxed group-hover:text-navy/60 transition-colors font-light">
                                     {sol.desc}
                                 </p>
                             </div>
@@ -88,7 +88,7 @@ const Solutions = () => {
                             {/* Footer Card */}
                             <div className="relative z-10 pt-8 flex items-center justify-between">
                                 <span className="text-[9px] font-bold uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-orange">Detail Layanan</span>
-                                <div className="w-12 h-12 rounded-full border border-white/5 flex items-center justify-center group-hover:bg-white group-hover:text-navy transition-all duration-700 glass-effect">
+                                <div className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center group-hover:bg-orange group-hover:border-orange group-hover:text-white transition-all duration-700 bg-white shadow-sm">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="-rotate-45 group-hover:rotate-0 transition-transform duration-500"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                                 </div>
                             </div>
@@ -100,13 +100,13 @@ const Solutions = () => {
                 </div>
 
                 {/* Bottom Stats or Marquee Focus */}
-                <div className="mt-24 md:mt-32 pt-20 border-t border-white/5 flex flex-col items-center">
-                    <p className="label-overline text-white/30 tracking-widest mb-16 text-center">Dipercaya oleh Berbagai Industri</p>
-                    <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-                        <img src="/1.svg" alt="Partner perusahaan" className="h-10 w-auto hover:opacity-100 transition-opacity" loading="lazy" />
-                        <img src="/2.svg" alt="Partner perusahaan" className="h-10 w-auto hover:opacity-100 transition-opacity" loading="lazy" />
-                        <img src="/3.svg" alt="Partner perusahaan" className="h-10 w-auto hover:opacity-100 transition-opacity" loading="lazy" />
-                        <img src="/4.svg" alt="Partner perusahaan" className="h-10 w-auto hover:opacity-100 transition-opacity" loading="lazy" />
+                <div className="mt-24 md:mt-32 pt-20 border-t border-black/5 flex flex-col items-center">
+                    <p className="label-overline text-navy/20 tracking-widest mb-16 text-center">Dipercaya oleh Berbagai Industri</p>
+                    <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+                        <img src="/1.svg" alt="Partner perusahaan" className="h-10 w-auto transition-all" loading="lazy" />
+                        <img src="/2.svg" alt="Partner perusahaan" className="h-10 w-auto transition-all" loading="lazy" />
+                        <img src="/3.svg" alt="Partner perusahaan" className="h-10 w-auto transition-all" loading="lazy" />
+                        <img src="/4.svg" alt="Partner perusahaan" className="h-10 w-auto transition-all" loading="lazy" />
                     </div>
                 </div>
             </div>

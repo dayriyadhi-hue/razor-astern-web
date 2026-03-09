@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`fixed w-full z-50 transition-all duration-700 ${scrolled ? 'glass-effect py-4 border-b border-white/5' : 'bg-transparent py-8'}`}>
+            <nav className={`fixed w-full z-50 transition-all duration-700 ${scrolled ? 'glass-effect py-4 border-b border-black/5' : 'bg-transparent py-8'}`}>
                 <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center">
                     <div className="flex items-center group cursor-pointer">
                         <img
@@ -38,7 +38,7 @@ const Navbar = () => {
                                 <a
                                     key={item.name}
                                     href={item.href}
-                                    className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50 hover:text-white transition-colors"
+                                    className={`text-[10px] font-bold uppercase tracking-[0.2em] transition-colors ${scrolled ? 'text-navy/50 hover:text-navy' : 'text-navy/60 hover:text-navy'}`}
                                 >
                                     {item.name}
                                 </a>
@@ -46,11 +46,11 @@ const Navbar = () => {
                         </div>
 
                         <div className="flex items-center gap-4">
-                            <a 
-                                href="https://wa.me/6281112345678" 
+                            <a
+                                href="https://wa.me/6281112345678"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="hidden sm:block px-8 py-3 bg-orange text-white text-[10px] font-bold tracking-[0.2em] uppercase transition-all hover:bg-orange/90 active:scale-95 rounded-full shadow-[0_10px_20px_rgba(240,90,40,0.2)]"
+                                className="hidden sm:block px-8 py-3 bg-orange text-white text-[10px] font-bold tracking-[0.2em] uppercase transition-all hover:bg-orange/90 active:scale-95 rounded-full shadow-[0_10px_20px_rgba(240,90,40,0.15)]"
                                 aria-label="Hubungi kami via WhatsApp untuk konsultasi gratis"
                             >
                                 Konsultasi Gratis
@@ -59,11 +59,11 @@ const Navbar = () => {
                                 onClick={() => setIsOpen(!isOpen)}
                                 aria-label={isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
                                 aria-expanded={isOpen}
-                                className={`flex items-center justify-center w-12 h-12 rounded-full border border-white/10 transition-all active:scale-95 ${scrolled ? 'bg-white/5' : 'bg-transparent hover:bg-white/10'}`}
+                                className={`flex items-center justify-center w-12 h-12 rounded-full border transition-all active:scale-95 ${scrolled ? 'bg-navy/5 border-navy/5' : 'bg-transparent border-navy/10 hover:bg-navy/5'}`}
                             >
                                 <div className="w-5 flex flex-col gap-1.5 items-end">
-                                    <div className="h-[2px] w-full bg-white rounded-full"></div>
-                                    <div className="h-[2px] w-3/4 bg-white rounded-full"></div>
+                                    <div className="h-[2px] w-full bg-navy rounded-full"></div>
+                                    <div className="h-[2px] w-3/4 bg-navy rounded-full"></div>
                                 </div>
                             </button>
                         </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 bg-slate-1000/95 z-[60] flex items-center justify-center backdrop-blur-3xl"
+                        className="fixed inset-0 bg-white/95 z-[60] flex items-center justify-center backdrop-blur-3xl"
                         role="dialog"
                         aria-modal="true"
                         aria-label="Menu navigasi"
@@ -85,7 +85,7 @@ const Navbar = () => {
                         <button
                             onClick={() => setIsOpen(false)}
                             aria-label="Tutup menu"
-                            className="absolute top-10 right-10 text-white p-2 hover:bg-white/10 rounded-full transition-all"
+                            className="absolute top-10 right-10 text-navy p-2 hover:bg-navy/5 rounded-full transition-all"
                         >
                             <X className="w-8 h-8" />
                         </button>
@@ -102,7 +102,7 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     whileHover={{ scale: 1.1 }}
-                                    className="text-4xl md:text-5xl font-extrabold text-white hover:text-orange transition-colors tracking-tight uppercase"
+                                    className="text-4xl md:text-5xl font-extrabold text-navy hover:text-orange transition-colors tracking-tight uppercase"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     {link.name}

@@ -34,7 +34,7 @@ const Footer = () => {
     const [openIndex, setOpenIndex] = useState(null);
 
     return (
-        <footer id="faq" className="py-24 md:py-32 bg-[#0A0C10] text-white overflow-hidden relative border-t border-white/[0.03] scroll-mt-20">
+        <footer id="faq" className="py-24 md:py-32 bg-white text-navy overflow-hidden relative border-t border-black/[0.03] scroll-mt-20">
             <div className="max-w-[1400px] mx-auto px-6 md:px-12">
                 {/* Unified Hub */}
                 <div id="info-hub" className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24">
@@ -43,8 +43,8 @@ const Footer = () => {
                         <img src="/RAS Logo.svg" alt="Logo PT Razan Aeterna Solusi" className="w-16 h-16 object-contain" loading="lazy" />
                         <div>
                             <span className="label-overline text-orange mb-4 block">Information Hub</span>
-                            <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tighter uppercase mb-6 leading-none">F.A.Q</h2>
-                            <p className="text-white/30 text-sm leading-relaxed font-light">
+                            <h2 className="text-4xl md:text-5xl font-extrabold text-navy tracking-tighter uppercase mb-6 leading-none">F.A.Q</h2>
+                            <p className="text-navy/40 text-sm leading-relaxed font-light">
                                 Temukan jawaban cepat untuk pertanyaan umum seputar layanan perizinan strategis kami.
                             </p>
                         </div>
@@ -53,20 +53,20 @@ const Footer = () => {
                     {/* Col 2: FAQ Items */}
                     <div className="lg:col-span-4 flex flex-col gap-2" role="region" aria-label="Pertanyaan yang sering diajukan">
                         {faqs.map((faq, i) => (
-                            <div key={i} className="glass-effect border border-white/[0.03] rounded-sm group overflow-hidden transition-all duration-500 hover:border-orange/20">
+                            <div key={i} className="bg-[#F9FAFB] border border-black/[0.03] rounded-2xl group overflow-hidden transition-all duration-500 hover:bg-white hover:shadow-xl hover:shadow-black/[0.02] hover:border-orange/20">
                                 <button
                                     onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                                    className="w-full px-6 py-5 flex items-center justify-between text-left transition-all hover:bg-white/[0.02]"
+                                    className="w-full px-6 py-5 flex items-center justify-between text-left transition-all"
                                 >
-                                    <span className={`text-[13px] font-bold tracking-tight pr-4 transition-colors ${openIndex === i ? 'text-orange' : 'text-white/80'}`}>
+                                    <span className={`text-[13px] font-bold tracking-tight pr-4 transition-colors ${openIndex === i ? 'text-orange' : 'text-navy/80'}`}>
                                         {faq.q}
                                     </span>
-                                    <div className={`flex-shrink-0 w-6 h-6 rounded-full border flex items-center justify-center transition-all duration-500 ${openIndex === i ? 'bg-orange border-orange rotate-45' : 'border-white/10'}`}>
-                                        <Plus className={`w-3 h-3 transition-colors ${openIndex === i ? 'text-white' : 'text-white/20'}`} />
+                                    <div className={`flex-shrink-0 w-6 h-6 rounded-full border flex items-center justify-center transition-all duration-500 ${openIndex === i ? 'bg-orange border-orange rotate-45' : 'border-black/10'}`}>
+                                        <Plus className={`w-3 h-3 transition-colors ${openIndex === i ? 'text-white' : 'text-navy/20'}`} />
                                     </div>
                                 </button>
                                 {openIndex === i && (
-                                    <div className="px-6 pb-6 text-white/40 text-[13px] leading-relaxed font-light animate-in fade-in slide-in-from-top-2 duration-500">
+                                    <div className="px-6 pb-6 text-navy/40 text-[13px] leading-relaxed font-light animate-in fade-in slide-in-from-top-2 duration-500">
                                         {faq.a}
                                     </div>
                                 )}
@@ -76,38 +76,38 @@ const Footer = () => {
 
                     {/* Col 3: Hubungi Kami */}
                     <div className="lg:col-span-2 flex flex-col pt-2">
-                        <span className="label-overline text-white/20 mb-10 block">Contact</span>
+                        <span className="label-overline text-black/20 mb-10 block">Contact</span>
                         <div className="flex flex-col gap-8">
                             <div className="group cursor-pointer">
                                 <span className="text-[9px] font-bold text-orange uppercase tracking-[.2em] mb-2 block">WhatsApp</span>
-                                <a href="https://wa.me/6281112345678" className="text-sm font-bold tracking-tight hover:text-orange transition-colors">+62 811 1234 5678</a>
+                                <a href="https://wa.me/6281112345678" className="text-sm font-bold tracking-tight text-navy hover:text-orange transition-colors">+62 811 1234 5678</a>
                             </div>
                             <div className="group cursor-pointer">
                                 <span className="text-[9px] font-bold text-orange uppercase tracking-[.2em] mb-2 block">Email</span>
-                                <a href="mailto:kontak@razansolusi.com" className="text-sm font-bold tracking-tight hover:text-orange transition-colors break-all">KONTAK@RAZANSOLUSI.COM</a>
+                                <a href="mailto:kontak@razansolusi.com" className="text-sm font-bold tracking-tight text-navy hover:text-orange transition-colors break-all">KONTAK@RAZANSOLUSI.COM</a>
                             </div>
                         </div>
                     </div>
 
                     {/* Col 4: Jam Operasional */}
                     <div className="lg:col-span-3 flex flex-col pt-2">
-                        <span className="label-overline text-white/20 mb-10 block">Location</span>
+                        <span className="label-overline text-black/20 mb-10 block">Location</span>
                         <div className="flex flex-col gap-8">
                             <div>
                                 <span className="text-[9px] font-bold text-orange uppercase tracking-[.2em] mb-2 block">Office Hub</span>
-                                <p className="text-sm text-white/50 leading-relaxed font-light">
+                                <p className="text-sm text-navy/50 leading-relaxed font-light">
                                     Tangerang Selatan, Banten, Indonesia
                                 </p>
                             </div>
                             <div className="flex gap-4">
                                 {[Facebook, Linkedin, Twitter].map((Icon, idx) => (
-                                    <a 
-                                        key={idx} 
-                                        href="#" 
+                                    <a
+                                        key={idx}
+                                        href="#"
                                         aria-label={Icon.name}
-                                        className="w-10 h-10 rounded-full border border-white/5 flex items-center justify-center hover:border-orange/30 hover:bg-orange/5 hover:text-orange transition-all cursor-pointer group glass-effect"
+                                        className="w-10 h-10 rounded-full border border-black/5 flex items-center justify-center hover:border-orange/20 hover:bg-orange/5 hover:text-orange transition-all cursor-pointer group bg-white"
                                     >
-                                        <Icon className="w-4 h-4 text-white/20 group-hover:text-orange transition-colors" />
+                                        <Icon className="w-4 h-4 text-black/20 group-hover:text-orange transition-colors" />
                                     </a>
                                 ))}
                             </div>
@@ -116,13 +116,13 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-12 border-t border-white/[0.03] flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-[9px] label-overline text-white/20 tracking-[.3em]">
+                <div className="pt-12 border-t border-black/[0.03] flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p className="text-[9px] label-overline text-black/20 tracking-[.3em]">
                         © 2026 Razan Aeterna Solusi. All Rights Reserved.
                     </p>
                     <div className="flex gap-8">
-                        <a href="#" className="text-[9px] label-overline text-white/20 hover:text-orange transition-colors tracking-[.2em]">Privacy Policy</a>
-                        <a href="#" className="text-[9px] label-overline text-white/20 hover:text-orange transition-colors tracking-[.2em]">Terms of Service</a>
+                        <a href="#" className="text-[9px] label-overline text-black/20 hover:text-orange transition-colors tracking-[.2em]">Privacy Policy</a>
+                        <a href="#" className="text-[9px] label-overline text-black/20 hover:text-orange transition-colors tracking-[.2em]">Terms of Service</a>
                     </div>
                 </div>
             </div>
