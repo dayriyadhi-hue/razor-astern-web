@@ -54,7 +54,7 @@ const Hero = () => {
                         className="md:col-span-12 lg:col-span-6"
                     >
                         <h2 className="text-xl md:text-3xl font-medium text-white leading-[1.2] max-w-xl">
-                            Navigasi <span className="text-gold">Regulasi</span> yang Kompleks dengan <span className="italic font-light">Presisi & Integritas.</span>
+                            Navigasi <span className="text-gold">Regulasi</span> yang Kompleks dengan <span className="italic font-light">Amanah & Kredibel.</span>
                         </h2>
                     </motion.div>
 
@@ -67,7 +67,7 @@ const Hero = () => {
                         className="md:col-span-4 lg:col-span-5 flex flex-col justify-end"
                     >
                         <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-lg md:text-right ml-auto">
-                            Membawa pengalaman bertahun-tahun ke dalam wadah baru yang lebih personal. Kami hadir sebagai mitra strategis dalam mengamankan masa depan bisnis Anda di pasar Indonesia.
+                            Membawa pengalaman ke dalam wadah baru yang lebih personal. Kami hadir sebagai mitra strategis dalam mengamankan masa depan bisnis Anda di pasar Indonesia.
                         </p>
                     </motion.div>
                 </div>
